@@ -55,8 +55,12 @@ The Solcast Python library is designed as a synchronous web service and does not
 The PowerFrameHandler.py and RadiationFrameHandler.py classes in this howto under solcast_frames example convert the list value resultsets into pandas dataframes aligned and indexed by the period_end DateTime field (all datetimes are expressed in UTC timezone).
 
 Example data results for [Power](https://solcast.com.au/api/docs/pv_power.html) DataFrames with columns available:
-### Estimated Actuals and Forecast
 
+### Power DataType
+
+![Power DataType](/imgs/power_datatype.png)
+
+### Power DataFrame contents
 ```
                             period  pv_estimate
 period_end                                     
@@ -67,7 +71,11 @@ period_end
 
 Example data results for [Radiation](https://solcast.com.au/api/docs/radiation.html) DataFrames with columns available:
 
-### Estimated Actuals
+### Radiation Estimated Actuals DataType
+
+![Radiation Estimated Actuals DataType](/imgs/radiation_actuals_datatype.png)
+
+### Estimated Actuals Radiation DataFrame contents
 
 ```
                            cloud_opacity  dhi  dni  ebh  ghi   period
@@ -77,7 +85,11 @@ period_end
 2017-10-02 12:00:00+00:00              0    0    0    0    0 00:30:00
 ```
 
-### Forecast
+### Radiation Forecasts DataType
+
+![Radiation Forecasts DataType](/imgs/radiation_forecast_datatype.png)
+
+### Forecast Radiation DataFrame contents
 
 ```
                            air_temp  azimuth  cloud_opacity  dhi  dni  dni10  dni90  ebh  ghi  ghi10  ghi90   period  zenith  
