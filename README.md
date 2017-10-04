@@ -2,7 +2,9 @@
 
 NOTE: You will need to register your user account to obtain an API key [https://solcast.com.au/api/register](https://solcast.com.au/api/register/).  Without an API key you will not be able to successfully obtain valid API results.
 
-## Windows Solcast API key as system/user environment variable.  Details on advanced editing [StackOverflow superuser](%windir%\System32\rundll32.exe sysdm.cpl,EditEnvironmentVariables)
+### Windows setup Solcast API Key
+
+Setup system/user environment variableDetails on advanced editing [StackOverflow superuser walkthrough](https://superuser.com/questions/949560/how-do-i-set-system-environment-variables-in-windows-10)
 
 ```
 WinKey + R
@@ -16,20 +18,20 @@ Copy and Paste the following text to the **Open:** input text box for the Run Di
 
 That will present this screen
 
-[Run Windows Environment Editor]((/imgs/win_launch_environment_editor.png)
+![Run Windows Environment Editor](/imgs/win_launch_environment_editor.png)
 
 Add a user or system environment variable to hold the Solcast API key.  User environment variables will only be available to your particular user, system environment variables are shared for all users on the system
 
-[Add Windows User Solcast API key]((/imgs/win_env_user_variable.png)
+![Add Windows User Solcast API key](/imgs/win_env_user_variable.png)
 
 After you have added the environment variable you will see the key listed in the current variables
 
-[Added Windows User Solcast API key]((/imgs/win_solcast_variable.png)
+![Added Windows User Solcast API key](/imgs/win_solcast_variable.png)
 
 **NOTE**: To reference this key you will need to reopen your shell prompt to read these variables again from the system (cmd, command.com, powershell, etc)
 
 
-## Linux / mac OS
+### Linux / mac OS
 
 Open a terminal prompt
 - mac OS: Spotlight search for `terminal`
@@ -41,7 +43,7 @@ nano .bash_profile
 
 If you do not have nano it is simpler text editor than `vi`.  Use your package manager to download and install or use `vi`.  The preferred package manager for mac OS is [Homebrew](https://brew.sh/) and once installed on your system you can issue similar commands to Linux `apt-get` and `yum` with the `brew` package manager.
 
-[Added mac OS User Solcast API key]((/imgs/mac_os_environment_variable.png)
+![Added mac OS User Solcast API key](/imgs/mac_os_environment_variable.png)
 
 
 ### This how to demonstrates working with using the Solcast API to load pandas data frames and then plot different chart data.  Tested and built with Python 3.6.2
@@ -97,6 +99,8 @@ import matplotlib.pyplot as plt
 from solcast_frames.latlng import LatLng
 from solcast_frames.radiationframehandler import RadiationFrameHandler
 from solcast_frames.powerframehandler import PowerFrameHandler
+
+plt.interactive(False) # Turn this off to create plots
 ```
 
 These following python classes are now available to use `LatLng`, `RadiationFrameHandler`, `PowerFrameHandler`
@@ -215,11 +219,17 @@ period_end
 In the file **main.py** is a minimal set of commands to obtain the following charts.  The pvlib library is a powerful open source tool that is used in computing and forecasting photovoltaic solar cell arrays.  There are numerous options and details that can be configured, this demonstrates the Solcast API abilities and simplicity.
 
 ```python
+# This line is only for using the matplotlib
+import matplotlib.pyplot as plt
+from solcast_frames.latlng import LatLng
+from solcast_frames.radiationframehandler import RadiationFrameHandler
 import timeit
 import pandas as pd
 import datetime
 # import pvlib forecast models
 from pvlib.forecast import GFS, NAM, NDFD, HRRR, RAP
+
+plt.interactive(False) # Turn this off to create plots
 
 #
 # Following code is from http://pvlib-python.readthedocs.io/en/latest/forecasts.html
