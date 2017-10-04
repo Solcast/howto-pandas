@@ -9,8 +9,6 @@ import datetime
 # import pvlib forecast models
 from pvlib.forecast import GFS, NAM, NDFD, HRRR, RAP
 
-
-
 plt.interactive(False) # Turn this off to create plots
 location = LatLng(lat=-33.86785, lng=151.215256, name="Sydney", tag="No wild Koalas", timezone="Australia/Sydney")
 print(location.desc())
@@ -19,7 +17,7 @@ print(location.desc())
 # Required fields latlng valid position, capacity as integer > 0
 # Adding in an optional keyword argument of an azimuth of 0
 # The following optional keyword arguments are recognized by the solcast-py library
-# azimuth | range: [-180 to 180] default: 0 in Southern Hemispherer, 180 in Northern Hemisphere
+# azimuth | range: [-180 to 180] default: 0 in Southern Hemisphere, 180 in Northern Hemisphere
 # tilt | range: [0 to 90] | default: 23
 # install_date | format: yyyyMMdd Will be ignored if a loss_factor is supplied
 # latest | [True, False] | default False

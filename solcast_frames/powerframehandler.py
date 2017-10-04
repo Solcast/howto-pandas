@@ -3,7 +3,6 @@ import solcast as sc
 from solcast_frames.latlng import LatLng
 
 class PowerFrameHandler:
-
     def forecast(lat_lng: LatLng, capacity: int, **kwargs) -> pd.DataFrame:
         """
 
