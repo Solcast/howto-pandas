@@ -98,3 +98,14 @@ period_end
 2017-10-02 20:00:00+00:00        17      -93             33   13   10      4     27    2   15     12     19 00:30:00      88  
 2017-10-02 20:30:00+00:00        17      -88              7   45  196     43    275   33   79     57     86 00:30:00      82 
 ```
+
+### Integrating with pvlib 
+
+In the file **pvlib_solcast.py** is a minimal set of commands to obtain the following charts.  The pvlib library is a powerful open source tool that is used in computing and forecasting photovoltaic solar cell arrays.  There are numerous options and details that can be configured, this demonstrates the Solcast API abilities and simplicity.  Example in the following code is 10 lines of pyhton code is required to get a radiation forecast versus 1 line to call the Solcast API for the same results.
+
+**Radiation** Forecast pvlib vs Solcast `ghi` `dhi`, `dni`
+![Radiation Compare pvlib/solcast](/imgs/pvlib_solcast_radiation.png)
+
+**Power** Forecast pvlib `ac` versus Solcast `pv_estimate`
+![Power Compare pvlib/solcast](/imgs/pvlib_solcast_power.png)
+
