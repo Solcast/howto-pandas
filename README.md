@@ -43,6 +43,8 @@ nano .bash_profile
 
 If you do not have nano it is simpler text editor than `vi`.  Use your package manager to download and install or use `vi`.  The preferred package manager for mac OS is [Homebrew](https://brew.sh/) and once installed on your system you can issue similar commands to Linux `apt-get` and `yum` with the `brew` package manager.
 
+Add the Solcast API Key to your user profile variables as so.
+
 ![Added mac OS User Solcast API key](/imgs/mac_os_environment_variable.png)
 
 
