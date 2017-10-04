@@ -1,10 +1,10 @@
-# HowTo Solcast - Python, Pandas, and MatPlotLib
+# HowTo Solcast - Python, Pandas, MatPlotLib, and PvLib
 
 NOTE: You will need to register your user account to obtain an API key [https://solcast.com.au/api/register](https://solcast.com.au/api/register/).  Without an API key you will not be able to successfully obtain valid API results.
 
 ### Windows setup Solcast API Key
 
-Setup system/user environment variableDetails on advanced editing [StackOverflow superuser walkthrough](https://superuser.com/questions/949560/how-do-i-set-system-environment-variables-in-windows-10)
+Setup System/User `environment variable`.  Details on advanced editing [StackOverflow superuser walkthrough](https://superuser.com/questions/949560/how-do-i-set-system-environment-variables-in-windows-10)
 
 ```
 WinKey + R
@@ -20,11 +20,11 @@ That will present this screen
 
 ![Run Windows Environment Editor](/imgs/win_launch_environment_editor.png)
 
-Add a user or system environment variable to hold the Solcast API key.  User environment variables will only be available to your particular user, system environment variables are shared for all users on the system
+Add a user or system `environment variable` to hold the Solcast API key.  User environment variables will only be available to your particular user, system environment variables are shared for all users on the system
 
 ![Add Windows User Solcast API key](/imgs/win_env_user_variable.png)
 
-After you have added the environment variable you will see the key listed in the current variables
+After you have added the `environment variable` you will see the key listed in the current variables
 
 ![Added Windows User Solcast API key](/imgs/win_solcast_variable.png)
 
@@ -91,7 +91,7 @@ Los Angeles, USA | 34.052235 | -118.243683
 
 ### Power/Radiation library method interaction
 
-In the file **main.py** is a minimal set of commands to obtain the following charts.  The break in the continuity between the Estimated Actuals and the Forecast predicted values on the time scale is due to that the time period falls between an in place Estimated Actual result being recorded and a next period available Forecast.  Currently all period results are broken into **30** minute timestamp periods.  This howto uses the `period_end` fields as the indexed field for the DataFrames (x - axis on the following charts)
+In the file **main.py** is a minimal set of commands to obtain the following charts.  The break in the continuity between the **Estimated Actuals** and the **Forecast** predicted values on the time scale is due to that the time period falls between an in place Estimated Actual result being recorded and a next period available Forecast.  Currently all period results are broken into **30** minute timestamp periods.  This howto uses the `period_end` fields as the indexed field for the DataFrames (x - axis on the following charts)
 
 Within this project workspace is folder `solcast_frames` that provides some `solcast-py` library helper translators to `pandas` DataFrames.  In the `main.py` file these helper classes are referenced like solar
 
@@ -143,7 +143,7 @@ fx_solcast_power.pv_estimate.plot()
 plt.show()
 ```
 
-**Power** Estimated Actuals with Forecast (`pv_estimate` over `period_end`)
+**Power** `Estimated Actuals` with `Forecast` (`pv_estimate` over `period_end`)
 ![Power Graph](/imgs/power.png)
 
 To obtain and plot the current estimates and forecast from the Solcast API for **Radiation** use the following code
@@ -162,7 +162,7 @@ fx_solcast_radiation.ghi.plot()
 plt.show()
 ```
 
-**Radiation** Estimated Actuals with Forecast (`ghi` over `period_end`)
+**Radiation** `Estimated Actuals` with `Forecast` (`ghi` over `period_end`)
 ![Radiation Graph](/imgs/radiation.png)
 
 ### Details of Solcast Python Client Library [Solcast Python API client library ](https://github.com/Solcast/solcast-py)
@@ -216,7 +216,7 @@ period_end
 2017-10-02 20:30:00+00:00        17      -88              7   45  196     43    275   33   79     57     86 00:30:00      82 
 ```
 
-### Integrating with pvlib 
+### Integrating with [pvlib](https://pvlib-python.readthedocs.io/en/latest/)
 
 In the file **main.py** is a minimal set of commands to obtain the following charts.  The pvlib library is a powerful open source tool that is used in computing and forecasting photovoltaic solar cell arrays.  There are numerous options and details that can be configured, this demonstrates the Solcast API abilities and simplicity.
 
@@ -271,6 +271,6 @@ plt.legend()
 plt.show()
 ```
 
-**Radiation** Forecast pvlib vs Solcast `ghi` `dhi`, `dni`
+**Radiation** Forecast **pvlib** vs **Solcast** `ghi` `dhi`, `dni`
 ![Radiation Compare pvlib/solcast](/imgs/pvlib_solcast_radiation.png)
 
