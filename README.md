@@ -106,6 +106,3 @@ In the file **pvlib_solcast.py** is a minimal set of commands to obtain the foll
 **Radiation** Forecast pvlib vs Solcast `ghi` `dhi`, `dni`
 ![Radiation Compare pvlib/solcast](/imgs/pvlib_solcast_radiation.png)
 
-**Power** Forecast pvlib `ac` versus Solcast `pv_estimate`
-![Power Compare pvlib/solcast](/imgs/pvlib_solcast_power.png)
-
