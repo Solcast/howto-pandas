@@ -43,7 +43,7 @@ nano .bash_profile
 
 If you do not have nano it is simpler text editor than `vi`.  Use your package manager to download and install or use `vi`.  The preferred package manager for mac OS is [Homebrew](https://brew.sh/) and once installed on your system you can issue similar commands to Linux `apt-get` and `yum` with the `brew` package manager.
 
-Add the Solcast API Key to your user profile variables as so.
+Add the Solcast API Key to your user profile variables.
 
 ![Added mac OS User Solcast API key](/imgs/mac_os_environment_variable.png)
 
@@ -93,7 +93,7 @@ Los Angeles, USA | 34.052235 | -118.243683
 
 In the file **main.py** is a minimal set of commands to obtain the following charts.  The break in the continuity between the **Estimated Actuals** and the **Forecast** predicted values on the time scale is due to that the time period falls between an in place Estimated Actual result being recorded and a next period available Forecast.  Currently all period results are broken into **30** minute timestamp periods.  This howto uses the `period_end` fields as the indexed field for the DataFrames (x - axis on the following charts)
 
-Within this project workspace is folder `solcast_frames` that provides some `solcast-py` library helper translators to `pandas` DataFrames.  In the `main.py` file these helper classes are referenced like solar
+Within this project workspace is folder `solcast_frames` that provides some `solcast-py` library helper translators to `pandas` DataFrames.  In the `main.py` file these helper classes are referenced below.
 
 ```python
 # This line is only for using the matplotlib
@@ -107,7 +107,7 @@ plt.interactive(False) # Turn this off to create plots
 
 These following python classes are now available to use `LatLng`, `RadiationFrameHandler`, `PowerFrameHandler`
 
-First you should create a location to obtain results for solcast forecasts like so
+First you should create a location to obtain results for solcast forecasts.  Example below.
 
 ```python
 location = LatLng(lat=-33.86785, lng=151.215256, name="Sydney", tag="No wild Koalas", timezone="Australia/Sydney")
@@ -134,7 +134,7 @@ power_estimated_actuals.pv_estimate.plot()
 # Plot the power `pv_estimate`
 # Required fields latlng valid position, capacity as integer > 0
 # The following optional keyword arguments are recognized by the solcast-py library
-# azimuth | range: [-180 to 180] default: 0 in Southern Hemispherer, 180 in Northern Hemisphere
+# azimuth | range: [-180 to 180] default: 0 in Southern Hemisphere, 180 in Northern Hemisphere
 # tilt | range: [0 to 90] | default: 23
 # install_date | format: yyyyMMdd Will be ignored if a loss_factor is supplied
 # loss_factor | [0 to 1] | default 0.9
@@ -218,7 +218,7 @@ period_end
 
 ### Integrating with [pvlib](https://pvlib-python.readthedocs.io/en/latest/)
 
-In the file **main.py** is a minimal set of commands to obtain the following charts.  The pvlib library is a powerful open source tool that is used in computing and forecasting photovoltaic solar cell arrays.  There are numerous options and details that can be configured, this demonstrates the Solcast API abilities and simplicity.
+In the file **main.py** is a minimal set of commands to obtain the following charts.  The pvlib library is a powerful open source tool that is used in computing and forecasting photovoltaic solar cell arrays.  There are numerous options and details that can be configured, the following example compares pvlib forecasts with Solcast forecasts and how to obtain datasets that can be compared and graphed.
 
 ```python
 # This line is only for using the matplotlib

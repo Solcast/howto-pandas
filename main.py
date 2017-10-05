@@ -27,7 +27,7 @@ power_estimated_actuals.pv_estimate.plot()
 # Plot the power `pv_estimate`
 # Required fields latlng valid position, capacity as integer > 0
 # The following optional keyword arguments are recognized by the solcast-py library
-# azimuth | range: [-180 to 180] default: 0 in Southern Hemispherer, 180 in Northern Hemisphere
+# azimuth | range: [-180 to 180] default: 0 in Southern Hemisphere, 180 in Northern Hemisphere
 # tilt | range: [0 to 90] | default: 23
 # install_date | format: yyyyMMdd Will be ignored if a loss_factor is supplied
 # loss_factor | [0 to 1] | default 0.9
