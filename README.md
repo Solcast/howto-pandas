@@ -39,7 +39,7 @@ Open a terminal prompt
 
 ```
 nano .bash_profile
-``` 
+```
 
 If you do not have nano it is simpler text editor than `vi`.  Use your package manager to download and install or use `vi`.  The preferred package manager for mac OS is [Homebrew](https://brew.sh/) and once installed on your system you can issue similar commands to Linux `apt-get` and `yum` with the `brew` package manager.
 
@@ -52,7 +52,7 @@ Add the Solcast API Key to your user profile variables.
 
 This is a demonstration project that shows an example of how to use the [solcast-py](https://github.com/Solcast/solcast-py) library to load a [Pandas](https://github.com/pandas-dev/pandas) data frame and then display a single field graphically using [MatPlotLib](https://github.com/matplotlib/matplotlib).  A familiarity with Python is not required.
 
-### Clone or download this project 
+### Clone or download this project
 
 ### Install all the require dependencies
 
@@ -74,11 +74,11 @@ or
 ```
 ValueError: did not find hdf5 version 4 headers
 ```
-These two packages need to be installed onto your Mac with homebrew. 
+These two packages need to be installed onto your Mac with homebrew.
 Click this link to install homebrew [here](https://brew.sh).
 These packages are located in the homebrew/science section. You will need to "tap" this section to access it. More information is found [here](https://github.com/Homebrew/homebrew-science).
 
-NOTE: Installing hdf5 on mac will take **a long time**. Give it time. 
+NOTE: Installing hdf5 on mac will take **a long time**. Give it time.
 ### Latitude and Longitude
 
 - First as stated above you will need an API key to make valid API requests to the Solcast system.
@@ -225,7 +225,7 @@ period_end
 period_end                                                                                                                    
 2017-10-02 19:30:00+00:00        17      -97             17    1    0      0      0    0    1      1      1 00:30:00      94  
 2017-10-02 20:00:00+00:00        17      -93             33   13   10      4     27    2   15     12     19 00:30:00      88  
-2017-10-02 20:30:00+00:00        17      -88              7   45  196     43    275   33   79     57     86 00:30:00      82 
+2017-10-02 20:30:00+00:00        17      -88              7   45  196     43    275   33   79     57     86 00:30:00      82
 ```
 
 ### Integrating with [pvlib](https://pvlib-python.readthedocs.io/en/latest/)
@@ -285,4 +285,3 @@ plt.show()
 
 **Radiation** Forecast **pvlib** vs **Solcast** `ghi` `dhi`, `dni`
 ![Radiation Compare pvlib/solcast](/imgs/pvlib_solcast_radiation.png)
-
