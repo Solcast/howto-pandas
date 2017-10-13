@@ -66,7 +66,19 @@ Alternatively you may need to use sudo the `-H` instructs `sudo` to install depe
 ```
 sudo -H pip install --upgrade -r requirements.txt
 ```
+If you are receiving an error when installing the netcdf4 package on Mac such as:
+```
+ValueError: did not find netCDF version 4 headers
+```
+or
+```
+ValueError: did not find hdf5 version 4 headers
+```
+These two packages need to be installed onto your Mac with homebrew. 
+Click this link to install homebrew [here](https://brew.sh).
+These packages are located in the homebrew/science section. You will need to "tap" this section to access it. More information is found [here](https://github.com/Homebrew/homebrew-science).
 
+NOTE: Installing hdf5 on mac will take **a long time**. Give it time. 
 ### Latitude and Longitude
 
 - First as stated above you will need an API key to make valid API requests to the Solcast system.
