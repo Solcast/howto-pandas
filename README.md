@@ -1,3 +1,6 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/njc0jklvq9qmpigj?svg=true)](https://ci.appveyor.com/project/Siliconrob/howto-pandas-yl20b)
+
+
 # HowTo Solcast - Python, Pandas, MatPlotLib, and PvLib
 
 NOTE: You will need to register your user account to obtain an API key [https://solcast.com.au/api/register](https://solcast.com.au/api/register/).  Without an API key you will not be able to successfully obtain valid API results.
