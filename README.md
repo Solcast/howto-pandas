@@ -1,5 +1,5 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/njc0jklvq9qmpigj?svg=true)](https://ci.appveyor.com/project/Siliconrob/howto-pandas-yl20b)
-
+[![Build Status](https://travis-ci.org/Solcast/howto-pandas.svg?branch=master)](https://travis-ci.org/Solcast/howto-pandas)
 
 # HowTo Solcast - Python, Pandas, MatPlotLib, and PvLib
 
