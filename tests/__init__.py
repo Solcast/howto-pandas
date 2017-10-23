@@ -1,0 +1,1 @@
+__author__ = 'Solcast API - How To Pandas'
