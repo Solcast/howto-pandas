@@ -30,7 +30,7 @@ def test_radiation_request():
         -12: LatLng(lat=-13.752, lng=-171.7382, name="Apia"),
         -11: LatLng(lat=-13.752, lng=-171.7382, name="Apia"),
         -10: LatLng(lat=21.37124, lng=-157.851, name="Honolulu"),
-        -9: LatLng(lat=61.22795, lng=-149.8535, name="Anchorage"),
+        -9: LatLng(lat=21.37124, lng=-157.851, name="Honolulu"),
         -8: LatLng(lat=34.0890, lng=-118.2128, name="Los Angeles"),
         -7: LatLng(lat=32.1011, lng=-110.742, name="Phoenix"),
         -6: LatLng(lat=19.3111, lng=-99.31640, name="Mexico City"),
