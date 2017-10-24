@@ -17,6 +17,7 @@ install:
   - activate test-environment
   - pip install coverage
   - pip install pytest
+  - pip install pandas
   - pip install solcast
 
 test_script:
