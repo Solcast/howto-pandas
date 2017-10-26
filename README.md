@@ -92,7 +92,7 @@ Clarification as I often forget the coordinate planes of Latitude and Longitude 
 
 [Credits - Learner.org](http://www.learner.org/jnorth/tm/LongitudeIntro.html)
 
-The Solcast API expects **East** for Longitude and **South** for Latitude to be expressed as a negative numbers
+The Solcast API expects **West** for Longitude and **South** for Latitude to be expressed as a negative numbers
 
 Example Locations on the Globe
 
