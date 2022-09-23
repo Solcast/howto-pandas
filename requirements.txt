@@ -8,7 +8,7 @@ matplotlib==2.0.2
 netCDF4==1.3.0
 numpy==1.13.3+mkl
 pandas==0.20.3
-protobuf==3.4.0
+protobuf==3.18.3
 pvlib==0.5.0
 pyparsing==2.2.0
 python-dateutil==2.6.1
